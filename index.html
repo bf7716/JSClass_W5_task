@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Let's Travel!</title>
+  
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Roboto:wght@500&display=swap"
+    rel="stylesheet">
+
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" crossorigin="anonymous">
+
+  <!-- css -->
+  <link rel="stylesheet" href="./css/all.css">
+</head>
+
+<body>
+  <section class="add">
+    <div class="container">
+      <div class="col-10 col-pad-12 flex margin-center flex-mob-column">
+      <div class="left col-6 col-pad-5 col-mob-10">
+        <img src="./imgs/undraw_Traveling_re_weve.webp" alt="網站首圖-搜尋、遊玩的夥伴圖" class="display-mob-none">
+        <img src="./imgs/Let’s-Travel.webp" alt="Let's Travel!">
+      </div>
+      <form class="from col-6 col-pad-7 col-mob-12" id="addForm">
+        <h2 class="from-title mb-5">
+          <i class="fas fa-plus-circle"></i>
+          <p>新增旅遊套票</p>
+        </h2>
+        <div class="from-addGroup">
+          <div class="addItem mb-2">
+            <label for="name">套票名稱</label>
+            <input type="text" id="name" placeholder="請填寫套票名稱">
+          </div>
+          <div class="addItem mb-2">
+            <label for="picUrl">圖片網址</label>
+            <input type="text" id="picUrl" placeholder="請填寫圖片網址">
+          </div>
+          <div class="addItem mb-2">
+            <label for="area">景點地區</label>
+            <select name="areaSelect" id="area">
+              <option value="" disabled selected>請選擇景點地區</option>
+              <option value="台北">台北</option>
+              <option value="台中">台中</option>
+              <option value="高雄">高雄</option>
+            </select>
+          </div>
+          <div class="addItem mb-2">
+            <label for="price">套票金額</label>
+            <input type="number" id="price" placeholder="請填寫套票金額">
+          </div>
+          <div class="addItem mb-2">
+            <label for="number">套票組數</label>
+            <input type="number" id="number" placeholder="請填寫套票組數">
+          </div>
+          <div class="addItem mb-2">
+            <label for="star">套票星級</label>
+            <input type="number" id="star" placeholder="請填寫套票星級">
+          </div>
+          <div class="addItem mb-2">
+            <label for="descip">套票描述</label>
+            <textarea id="descip" rows="5" placeholder="請填寫套票描述（限 100 字）"></textarea>
+          </div>
+          <div class="full-container text-right">
+            <input type="button" class="addbtn" value="新增套票">
+          </div>
+        </div>
+      </form>
+    </div>
+    </div>
+  </section>
+  <section class="list">
+    <div class="container">
+      <div class="filterBar col-10 col-pad-12  mb-5">
+        <select id="select">
+          <option value="" disabled selected>地區搜尋</option>
+          <option value="全部">全部</option>
+          <option value="台北">台北</option>
+          <option value="台中">台中</option>
+          <option value="高雄">高雄</option>
+        </select>
+        <p id="filterResult">本次搜尋共 筆資料</p>
+      </div>
+      <div id="resultBlock" class="resultBlock container flex flex-wrap">
+        <!-- <div class="col-4 mb-5">
+          <div class="card">
+            <div class="cardHeader">
+              <span class="aeraTag">台北</span>
+              <span class="scoreTag">8.6</span>
+              <img src="./imgs/photo-1477894387642-00a731c511b3.png" alt="綠島自由行套裝行程">
+            </div>
+            <div class="cardBody">
+              <div class="cardContent">
+                <h3 class="cardTitle">綠島自由行套裝行程</h3>
+                <p class="cardText">
+                  行程加贈『綠島浮潛體驗』以及『綠島生態導覽』，讓你用輕鬆的綠島套裝自由行，也能深度認識綠島在地文化。
+                </p>
+              </div>
+            </div>
+            <div class="cardFooter">
+              <div class="numberBlock">
+                <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
+                <p>剩下最後 8 組</p>
+              </div>
+              <div class="priceBlock">
+                <span>TWD</span>
+                <p class="price">$1,280</p>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </section>
+</div>
+
+<script src="./js/main.js"></script>
+</body>
+
+</html>
