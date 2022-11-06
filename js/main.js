@@ -66,13 +66,7 @@ addbtn.addEventListener('click',e => {
     addGroup.value.trim() === "" ||
     addPrice.value.trim() === "" ||
     addRate.value.trim() === ""){
-      inputAlert(addName, "圖片名稱");
-      inputAlert(addImgUrl, "圖片網址");
-      inputAlert(addArea, "景點地區");
-      inputAlert(addDescip, "套票描述");
-      inputAlert(addGroup, "套票組數");
-      inputAlert(addPrice, "套票金額");
-      inputAlert(addRate, "套票描述");
+      alert(`欄位不得為空，請填入資訊`);
   }else{
     obj.id = data.length;
     obj.name = addName.value;
@@ -127,10 +121,5 @@ function renderData(data){
   list.innerHTML = content;
   filterResult.textContent = `共有 ${data.length} 筆資料，歡迎使用地區搜尋`;
 };
-
-function inputAlert(item, name){
-  item.value.trim() === "" ?
-  alert(`${name}不得為空，請填入資訊`) : false;
-}
 
 renderData(data);
